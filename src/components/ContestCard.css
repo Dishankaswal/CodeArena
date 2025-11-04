@@ -1,0 +1,228 @@
+.contest-card {
+  background: #fff;
+  border: 5px solid #000;
+  overflow: hidden;
+  transition: all 0.3s;
+  box-shadow: 8px 8px 0 #000;
+  transform: rotate(0deg);
+}
+
+.contest-card:hover {
+  transform: translate(-4px, -4px) rotate(-1deg);
+  box-shadow: 12px 12px 0 #000;
+}
+
+.contest-header {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-bottom: 5px solid #000;
+}
+
+.contest-icon {
+  font-size: 5rem;
+  filter: drop-shadow(4px 4px 0 rgba(0, 0, 0, 0.3));
+  animation: wiggle 3s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(-10deg) scale(1.1); }
+  75% { transform: rotate(10deg) scale(1.1); }
+}
+
+.contest-body {
+  padding: 1.5rem;
+  background: #fff;
+}
+
+.contest-timer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #000;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  background: #fef6e4;
+  padding: 0.5rem 1rem;
+  border: 3px solid #000;
+  box-shadow: 3px 3px 0 #000;
+  width: fit-content;
+}
+
+.contest-timer.running {
+  background: #ff6b6b;
+  animation: pulse-timer 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse-timer {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.timer-icon {
+  font-size: 1.2rem;
+}
+
+.contest-title {
+  font-size: 1.6rem;
+  margin-bottom: 0.75rem;
+  color: #000;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.contest-date {
+  color: #000;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+.registered-count {
+  color: #000;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  background: #8bd3dd;
+  padding: 0.5rem 1rem;
+  border: 3px solid #000;
+  box-shadow: 3px 3px 0 #000;
+  width: fit-content;
+}
+
+.btn-add-questions {
+  display: block;
+  width: 100%;
+  padding: 0.9rem;
+  border: 4px solid #000;
+  font-size: 1rem;
+  font-weight: 900;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  background: #b8e994;
+  margin-bottom: 0.75rem;
+  transition: all 0.2s;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 4px 4px 0 #000;
+}
+
+.btn-add-questions:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 #000;
+}
+
+.btn-view-contest {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  border: 5px solid #000;
+  font-size: 1.1rem;
+  font-weight: 900;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  background: #ff6b6b;
+  margin-bottom: 0.75rem;
+  transition: all 0.2s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 6px 6px 0 #000;
+  animation: pulse-button 2s ease-in-out infinite;
+}
+
+.btn-view-contest:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 9px 9px 0 #000;
+}
+
+@keyframes pulse-button {
+  0%, 100% { box-shadow: 6px 6px 0 #000; }
+  50% { box-shadow: 8px 8px 0 #000; }
+}
+
+.btn-view-questions {
+  display: block;
+  width: 100%;
+  padding: 0.9rem;
+  border: 4px solid #000;
+  font-size: 1rem;
+  font-weight: 900;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  background: #8bd3dd;
+  margin-bottom: 0.75rem;
+  transition: all 0.2s;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 4px 4px 0 #000;
+}
+
+.btn-view-questions:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 #000;
+}
+
+.btn-register-contest {
+  width: 100%;
+  padding: 0.9rem;
+  border: 4px solid #000;
+  font-size: 1rem;
+  font-weight: 900;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: #f582ae;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 4px 4px 0 #000;
+}
+
+.btn-register-contest:hover:not(:disabled) {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 #000;
+}
+
+.btn-register-contest.registered {
+  background: #b8e994;
+  color: #000;
+}
+
+.btn-register-contest:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.login-prompt {
+  text-align: center;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 700;
+  font-style: normal;
+  background: #fef6e4;
+  padding: 1rem;
+  border: 3px solid #000;
+  box-shadow: 4px 4px 0 #000;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .contest-card {
+    box-shadow: 6px 6px 0 #000;
+  }
+  
+  .contest-card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 8px 8px 0 #000;
+  }
+}
