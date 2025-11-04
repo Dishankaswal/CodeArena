@@ -1,14 +1,18 @@
+# =========================
+# 🚀 CodeArena Project .gitignore
+# =========================
+
 # Dependencies
 node_modules/
-/.pnp
+.pnp
 .pnp.js
 
 # Testing
-/coverage
+coverage/
 
 # Production
-/build
-/dist
+build/
+dist/
 
 # Misc
 .DS_Store
@@ -24,7 +28,7 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 
-# IDE
+# IDE / Editor files
 .vscode/
 .idea/
 *.swp
@@ -32,10 +36,10 @@ lerna-debug.log*
 *~
 
 # Supabase
-supbase.config.js
+# (Don't ignore supabase.config.js — required for Netlify build)
 .env.supabase
 
-# API Keys (DO NOT COMMIT)
+# API Keys (DO NOT COMMIT raw key files)
 **/config.js
 **/*config.js
 !vite.config.js
